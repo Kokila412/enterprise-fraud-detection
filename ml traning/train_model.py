@@ -9,12 +9,8 @@ print("Step 1: Generating synchronized 2-Feature data matrix (Amount, Risk)...")
 np.random.seed(42)
 num_samples = 5000
 
-# Feature 1: Numerical Amount
 amounts = np.random.exponential(scale=200, size=num_samples)
-# Feature 2: Calculated Structural Risk Scores (0.0 to 1.5)
 risk_scores = np.random.uniform(0.0, 1.2, size=num_samples)
-
-# Logical rules linking features to the target classification state
 is_fraud = np.zeros(num_samples)
 for i in range(num_samples):
     if risk_scores[i] >= 0.7 or (amounts[i] > 2000 and risk_scores[i] > 0.4):
