@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise UPI Secure Gateway</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>In-Flight UPI Transaction Gateway</h2>
+        <form id="upi-payment-form" onsubmit="handleTransactionSubmit(event)">
+            <label for="sender_id">Sender UPI ID (VPA):</label>
+            <input type="text" id="sender_id" value="user@okaxis" required>
+
+            <label for="receiver_id">Receiver UPI ID (VPA):</label>
+            <input type="text" id="receiver_id" placeholder="e.g., fresh_scammer@okaxis" required>
+
+            <label for="amount">Transaction Amount (INR):</label>
+            <input type="number" id="amount" placeholder="e.g., 2500" min="1" step="any" required>
+
+            <button type="submit" id="submit-btn">Authorize UPI Transfer</button>
+        </form>
+
+        <div id="transaction-result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
