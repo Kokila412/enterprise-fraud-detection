@@ -57,6 +57,7 @@ graph TD
     E --> F
     F --> G
     F --> H
+```
 
 Technical Parameter Metrics:
 Virtual Payment Address (VPA) Integrity: Uses string-matching and natural language heuristics to scan for spoofed high-profile keywords (such as customer_care or verification) deployed to mimic official entities.
